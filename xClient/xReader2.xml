@@ -95,6 +95,7 @@
 					var redirect = y.diagnostics.redirect;
 					var count = redirect && redirect.length();
 					if (count) {
+						y.log('redirect count : ' + count);
 						for (var i = 0; i < count; i += 1) {
 							var redir = redirect[i];
 							y.log('redirect: ' + redir.@status + ' = ' + redir.toString());
@@ -125,7 +126,7 @@
 						try {
 							content = resp.response;
 						} catch (err) {
-							y.log(err);
+							y.log('err'+err);
 							content = '';
 						}
 					} else content = '';
