@@ -82,10 +82,12 @@
 					
 					// SENDING HTTP REQUEST
 					var resp ;
+					y.log('before request');
 					if (method == "get")       resp = request.get();
 					else if (method == "post") resp = request.post(content);
 					else if (method == "put")  resp = request.put(content);
 					else if (method == "head") resp = request.head();
+					y.log('after request');
 
 					// RECIEVING DATA
 					y.log('response length: ' + (resp.response && resp.response.length));
